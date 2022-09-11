@@ -82,7 +82,8 @@ li {
 
 .hdr-nav-link,
 .hdr-contcs {
-  display: inline-block;
+  display: flex;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -123,6 +124,7 @@ li {
   letter-spacing: 0.02em;
   color: var(--seconds-text);
   text-decoration: none;
+  fill: currentColor;
 }
 .item_cont:hover,
 .item_cont:focus {
@@ -136,6 +138,7 @@ li {
   letter-spacing: 0.02em;
   text-decoration: none;
   color: var(--seconds-text);
+  fill: currentColor;
 }
 .item_cont_tel:hover,
 .item_cont_tel:focus {
@@ -143,18 +146,11 @@ li {
 }
 .headr-icon {
   display: inline-flex;
-  fill: var(--seconds-text);
   margin-right: 10px;
-  justify-items: center;
-  align-items: center;
-  text-decoration: none;
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
 }
-.headr-icon:hover,
-.headr-icon:focus {
-  fill: var(--focus-color);
+
+.text_line.current {
+  color: var(--button-color);
 }
 /*SECTION-1*/
 .sect {
@@ -163,6 +159,9 @@ li {
   padding-bottom: 200px;
   background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/img-backg.jpg);
+  background-size: 1600px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .subject {
   height: 120px;
@@ -224,17 +223,18 @@ li {
   gap: 30px;
   margin-bottom: 30px;
   background-color: var(--section-color);
+  border-radius: 4px;
   justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 120px;
 }
 .bg-icon {
   display: flex;
   align-content: center;
   justify-content: center;
-  height: 120px;
   border: transparent;
-  border-radius: 4px;
   background-color: var(--section-color);
-  margin-bottom: 30px;
 }
 
 .subtitle {
@@ -316,6 +316,7 @@ li {
 .social-icon {
   display: flex;
   margin-top: 16px;
+  gap: 10px;
 }
 .social-link {
   display: flex;
@@ -324,7 +325,6 @@ li {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  gap: 10px;
   fill: var(--icon-color);
 }
 
@@ -356,7 +356,6 @@ li {
   gap: 30px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 94px;
 }
 
 .clients-links {
@@ -373,7 +372,7 @@ li {
 .clients-links:hover,
 .clients-links:focus {
   fill: var(--focus-color);
-  border: 1px solid var(--focus-color);
+  border-color: var(--focus-color);
 }
 
 /*foot*/
@@ -399,6 +398,9 @@ footer {
   margin-top: 20px;
   height: 81px;
   width: 231px;
+}
+.item-foot {
+  margin-bottom: 10px;
 }
 .title-foot {
   font-family: 'Raleway';
@@ -437,7 +439,7 @@ footer {
 .item-foot:not(:nth-last-child) {
   margin-bottom: 9px;
 }
-.social{
+.social {
   margin-left: 70px;
 }
 
@@ -446,13 +448,17 @@ footer {
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
 .socials-list {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 878px;
   gap: 10px;
 }
 .soc-item {
@@ -516,14 +522,19 @@ footer {
   flex-wrap: wrap;
   gap: 30px;
 }
+.proj-item {
+  width: 370px;
+}
+.proj-item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 .proj-img {
   padding-left: 22px;
   padding-right: 22px;
   padding-top: 20px;
   padding-bottom: 20px;
-  border-left: 1px solid var(--bords-colors);
-  border-bottom: 1px solid var(--bords-colors);
-  border-right: 1px solid var(--bords-colors);
+  border: 1px solid var(--bords-colors);
 }
 .project {
   margin-bottom: 4px;
